@@ -1,0 +1,69 @@
+html,body {
+	padding:0;/*for the whole thing to be a part of the page without any margin or padding or anything*/
+	margin:0;
+}
+
+.header {
+	color: red;
+	text-align:center;
+	padding:10px;
+}
+
+.nav {
+/*its blank as of now it might become useful for something as i learn*/
+
+}
+
+ul {
+	padding : 0px; /*dont ever put any value other than 0 coz this will cause the hover thing to not cover the entire box area*/
+	margin:0px; /*even this is for a similar reason*/
+	list-style-type:none; /*it is very imp that u mention these proprties where i have written now to get a the proper nav*/
+	border: 2px solid black;
+	overflow: hidden; /*This helps in keeping the elements inside the box if u dont write u will get all elements outside */
+	background: red;
+	width:100%; /*coz i wanted the navbar to stretch throughout the screen this is the ony way it was happening*/
+}
+
+li {
+	float:left; /*see there are two ways to place a nav bar this is one of them i find this is much better coz i had the code online*/
+	padding: 0px; 
+	border-right:1px solid yellow;
+	
+}
+ /*oh yeah we have this DROPDOWN thing earlier i used to use lists i guess this is a more professional way to do it. do evrything
+exactly the way i have done here */
+li a, .dropbtn  {
+	 text-decoration:none;
+	 text-align:center;
+	 display:inline-block; /*when u want a horizontal nav bar*/
+	 color: navy;
+	 padding: 10px; /*to may the fields in the navbar bigger*/
+}
+
+li a:hover,.dropdown:hover .dropbtn {/*i hav written it this way that drpdown and dropbtn thing coz the other way it wont work*/
+	background-color: grey;
+}
+/* 
+li .dropdown { 
+	display:inline-block;
+}
+this was in w3schools code without the code still seems to work
+*/
+
+.dropdown-content {
+     display:none; /*there is no dropdown becoz of it like it sort of hides it*/
+	 position:absolute; /*the content to be right below the main element its is droppping from*/
+	 background: red;
+}	
+
+.dropdown-content a {
+	display: block; /*for it to be vertical and not horizontal ; for horizontal all you need to do is make it inline*/
+	border-bottom:1px solid black;
+}
+
+.dropdown-content a:hover {
+	background: lightpink; 
+}
+.dropdown:hover .dropdown-content {
+	display:block; /*for the content in the dropdown to be visible while the mouse hovering over it*/
+}
